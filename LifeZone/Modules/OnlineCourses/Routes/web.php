@@ -1,6 +1,7 @@
 <?php
 
 use Modules\OnlineCourses\Http\Controllers\CourseController;
+use Modules\OnlineCourses\Http\Controllers\CoursePaymentController;
 
 
 /*
@@ -28,6 +29,15 @@ Route::prefix('onlinecourses')->group(function() {
 // Course Details
  Route::get('/course-details/{id}', [CourseController::class, 'course_details_index'])->name('course-details');
 // Course checkout
-Route::get('/course-checkout/{id}', [CourseController::class, 'course_checkout'])->name('course-checkout');
+Route::get('/course-checkout/{id}', [CourseController::class, 'course_checkout_index'])->name('course-checkout');
+
+
+
+Route::middleware('auth')->group(function () {
+
+// Course payment
+Route::get('/course-payment/{id}', [CoursePaymentController::class, 'course_payment_index'])->name('course-payment');
+    
+});
 
 

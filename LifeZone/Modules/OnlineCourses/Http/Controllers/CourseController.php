@@ -41,7 +41,7 @@ class CourseController extends Controller
 
     // Checkout Details
 
-    public function course_checkout($id)
+    public function course_checkout_index($id)
     {
         $courseData = Course::find($id);
 

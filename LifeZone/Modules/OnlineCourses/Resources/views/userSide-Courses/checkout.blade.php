@@ -77,7 +77,7 @@
                             </p>
                         </div>
                         <div class="text-center ">
-                            <a href="payment.html" class="default-btn3 mt-1">Start Now</a>
+                            <a href="{{ route('course-payment', ['id' =>$courseData->id ] ) }}" class="default-btn3 mt-1">Start Now</a>
                         </div>
 
                     </div>

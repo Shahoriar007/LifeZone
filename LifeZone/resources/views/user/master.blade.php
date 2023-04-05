@@ -187,7 +187,8 @@
         @yield('courseDetails')
         <!-- Checkout -->
         @yield('checkout')
-      
+        <!-- Payment -->
+        @yield('payment')
 
 
   
