@@ -1,6 +1,6 @@
 <?php
 
-use Modules\OnlineCourses\Http\Controllers\CourserUserSideController;
+use Modules\OnlineCourses\Http\Controllers\CourseController;
 
 
 /*
@@ -22,6 +22,7 @@ Route::prefix('onlinecourses')->group(function() {
 
 
 
-// Route::get('/courses', [CourserUserSideController::class, 'coursesView'])->name('courses');
+ Route::get('/courses', [CourseController::class, 'index'])->name('courses');
+ Route::get('/course-details/{id}', [CourseController::class, 'course_details_index'])->name('course-details');
 
 

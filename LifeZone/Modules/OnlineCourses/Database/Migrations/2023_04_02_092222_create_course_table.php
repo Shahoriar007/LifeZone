@@ -13,10 +13,20 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('course', function (Blueprint $table) {
+        Schema::create('courses', function (Blueprint $table) {
 
             $table->id();
-            $table->string('nid')->nullable();
+            $table->string('title');
+            $table->string('slug')->nullable();
+            $table->text('description')->nullable();
+            $table->string('price')->nullable();
+            $table->string('instructor')->nullable();
+            $table->string('offer_price')->nullable();
+            $table->string('validity')->nullable();
+            $table->string('thumbnails')->nullable();
+            $table->unsignedBigInteger('course_categories');
+
+            $table->foreign('course_categories')->references('id')->on('course_categories')->onDelete('cascade');
 
             $table->timestamps();
         });
