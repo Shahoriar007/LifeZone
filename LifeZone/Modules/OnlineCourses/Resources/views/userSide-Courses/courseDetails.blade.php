@@ -29,7 +29,10 @@
                         <p>{{ $courseDetails[0]->description }}</p>
                     </div>
 
-                    <h3>Summaries</h3>
+                    @if(!empty($content[0])) 
+                       <h3>Summaries</h3>
+                    @endif
+                    
 
                     <div class="faq-accordion faq-accordion-style-two">
                         <ul class="accordion">
@@ -46,7 +49,7 @@
 
                                 @php
 
-                                $videos = Modules\OnlineCourses\Entities\CourseContent::where('content_summary_id', '=', $contentSummary->id)->get();
+                                    $videos = Modules\OnlineCourses\Entities\CourseContent::where('content_summary_id', '=', $contentSummary->id)->get();
 
                                 @endphp
 
@@ -95,7 +98,7 @@
                             ৳{{ $courseDetails[0]->offer_price }}
                         </div>
                         <div class="text-center">
-                            <a href="checkout.html" class="default-btn2 mt-1">Enroll Now</a>
+                            <a href="{{ route('course-checkout', ['id' => $courseDetails[0]->id] ) }}" class="default-btn2 mt-1">Enroll Now</a>
                         </div>
                     </div>
                     <div class="mt-3">

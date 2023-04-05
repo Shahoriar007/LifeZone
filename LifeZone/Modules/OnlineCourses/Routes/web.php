@@ -21,8 +21,13 @@ Route::prefix('onlinecourses')->group(function() {
 });
 
 
+// User Side 
 
+// All course
  Route::get('/courses', [CourseController::class, 'index'])->name('courses');
+// Course Details
  Route::get('/course-details/{id}', [CourseController::class, 'course_details_index'])->name('course-details');
+// Course checkout
+Route::get('/course-checkout/{id}', [CourseController::class, 'course_checkout'])->name('course-checkout');
 
 
