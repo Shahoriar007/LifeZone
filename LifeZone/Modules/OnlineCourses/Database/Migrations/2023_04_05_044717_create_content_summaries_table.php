@@ -16,6 +16,10 @@ return new class extends Migration
         Schema::create('content_summaries', function (Blueprint $table) {
             $table->id();
             $table->string('summary_title')->nullable();
+            
+            $table->unsignedBigInteger('course_id');
+            $table->foreign('course_id')->references('id')->on('courses')->onDelete('cascade');
+            
             $table->timestamps();
         });
     }

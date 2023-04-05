@@ -9,6 +9,8 @@ use Illuminate\Support\Facades\DB;
 
 use Modules\OnlineCourses\Entities\Course;
 use Modules\OnlineCourses\Entities\CourseCategory;
+use Modules\OnlineCourses\Entities\ContentSummary;
+use Modules\OnlineCourses\Entities\CourseContent;
 
 class CourseController extends Controller
 {
@@ -37,9 +39,11 @@ class CourseController extends Controller
             ->where('courses.id', '=', $id)
             ->get();
 
+        $content = ContentSummary::where('course_id', '=', $id)->get();
+
             
 
-        return view('onlinecourses::userSide-Courses.courseDetails',compact('courseDetails'));
+        return view('onlinecourses::userSide-Courses.courseDetails',compact('courseDetails','content'));
     }
 
     /**
