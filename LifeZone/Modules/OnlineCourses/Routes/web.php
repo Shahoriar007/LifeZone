@@ -3,6 +3,8 @@
 use Modules\OnlineCourses\Http\Controllers\CourseController;
 use Modules\OnlineCourses\Http\Controllers\CoursePaymentController;
 
+use Modules\OnlineCourses\Http\Controllers\CourseCategoryController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -40,4 +42,8 @@ Route::get('/course-payment/{id}', [CoursePaymentController::class, 'course_paym
     
 });
 
+// Admin side
+
+// Course Category
+Route::get('/course-category', [CourseCategoryController::class, 'index'])->name('course_category');
 
