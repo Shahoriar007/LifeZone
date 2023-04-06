@@ -249,6 +249,8 @@
 
        <!-- Category List -->
        @yield('courseCategoryList')
+       <!-- Add Category -->
+       @yield('addCourseCategory')
 
 
     </div>

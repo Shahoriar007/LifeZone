@@ -10,10 +10,7 @@ use Modules\OnlineCourses\Entities\CourseCategory;
 
 class CourseCategoryController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     * @return Renderable
-     */
+    // Show List
     public function index()
     {
         $courseCategorys = CourseCategory::all();
@@ -21,63 +18,38 @@ class CourseCategoryController extends Controller
         return view('onlinecourses::adminSide-Courses.courseCategoryList',compact('courseCategorys'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     * @return Renderable
-     */
-    public function create()
+    
+    public function createIndex()
     {
-        return view('onlinecourses::create');
+        return view('onlinecourses::adminSide-Courses.addCourseCategory');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     * @param Request $request
-     * @return Renderable
-     */
+
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'category_name' => 'required|max:50'
+        ]);
+
+        $Category = CourseCategory::create([
+            'category_name' => $validatedData['category_name'],
+        ]);
+
+        return redirect()->route('course_category');
+
     }
 
-    /**
-     * Show the specified resource.
-     * @param int $id
-     * @return Renderable
-     */
-    public function show($id)
-    {
-        return view('onlinecourses::show');
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     * @param int $id
-     * @return Renderable
-     */
+    
     public function edit($id)
     {
         return view('onlinecourses::edit');
     }
 
-    /**
-     * Update the specified resource in storage.
-     * @param Request $request
-     * @param int $id
-     * @return Renderable
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     * @param int $id
-     * @return Renderable
-     */
+    
     public function destroy($id)
     {
-        //
+        CourseCategory::findOrFail($id)->delete();
+
+        return redirect()->route('course_category');
     }
 }

@@ -9,7 +9,7 @@
                 
             </div>
             <div class="page-btn">
-                <a href="" class="btn btn-added">
+                <a href="{{ route('add_course_category_view') }}" class="btn btn-added">
                     <img src="frontendAdmin/assets/img/icons/plus.svg" alt="img">Add New Category
                 </a>
             </div>
@@ -49,6 +49,7 @@
                                     </label>
                                 </th>
                                 <th>Category Name</th>
+                                <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -63,6 +64,14 @@
                                     </label>
                                 </td>
                                 <td class="text-bolds">{{ $courseCategory->category_name }}</td>
+                                <td>
+                                    <a class="me-3" href="editpurchase.html">
+                                        <img src="frontendAdmin/assets/img/icons/edit.svg" alt="img">
+                                    </a>
+                                    <a class="me-3 confirm-text" href="{{ route('delete_course_category', ['id' => $courseCategory->id] ) }}">
+                                        <img src="frontendAdmin/assets/img/icons/delete.svg" alt="img">
+                                    </a>
+                                </td>
                                 
                                
                             </tr>

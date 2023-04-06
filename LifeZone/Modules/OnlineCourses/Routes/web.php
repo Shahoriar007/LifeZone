@@ -44,6 +44,11 @@ Route::get('/course-payment/{id}', [CoursePaymentController::class, 'course_paym
 
 // Admin side
 
-// Course Category
+// Course Category List
 Route::get('/course-category', [CourseCategoryController::class, 'index'])->name('course_category');
-
+// Add Course Category from View
+Route::get('/add_course-category', [CourseCategoryController::class, 'createIndex'])->name('add_course_category_view');
+// Store Course Category
+Route::post('/add_course-category', [CourseCategoryController::class, 'store'])->name('add_course_category');
+// Delete Category
+Route::get('/add_course-category/{id}', [CourseCategoryController::class, 'destroy'])->name('delete_course_category');

@@ -9,7 +9,9 @@ class CourseCategory extends Model
 {
     use HasFactory;
 
-    protected $fillable = [];
+    protected $fillable = [
+        'category_name',
+    ];
     
     protected static function newFactory()
     {
