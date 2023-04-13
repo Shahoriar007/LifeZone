@@ -9,7 +9,13 @@ class CourseContent extends Model
 {
     use HasFactory;
 
-    protected $fillable = [];
+    protected $fillable = [
+        'video_title',
+        'video_link',
+        'course_id',
+        'content_summary_id',
+
+    ];
     
     protected static function newFactory()
     {

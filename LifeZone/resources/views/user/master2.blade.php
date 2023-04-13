@@ -7,40 +7,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Revolution Slider CSS -->
-    <link rel="stylesheet" href="{{ asset('assets//revolution/css/settings.css')}}">
-    <link rel="stylesheet" href="{{ asset('assets//revolution/css/layers.css')}}">
-    <link rel="stylesheet" href="{{ asset('assets//revolution/css/navigation.css')}}">
+    <link rel="stylesheet" href="{{ asset('frontend/assets/revolution/css/settings.css')}}">
+    <link rel="stylesheet" href="{{ asset('frontend/assets/revolution/css/layers.css')}}">
+    <link rel="stylesheet" href="{{ asset('frontend/assets/revolution/css/navigation.')}}">
 
     <!-- Links of CSS files -->
-    <link rel="stylesheet" href="{{ asset('assets//css/bootstrap.min.css')}}">
-    
-    <link rel="stylesheet" href="{{ asset('assets//css/boxicons.min.css')}}">
-    <link rel="stylesheet" href="{{ asset('assets//css/flaticon.css')}}">
-    <link rel="stylesheet" href="{{ asset('assets//css/owl.carousel.min.css')}}">
-    <link rel="stylesheet" href="{{ asset('assets//css/owl.theme.default.min.css')}}">
-    <link rel="stylesheet" href="{{ asset('assets//css/odometer.min.css')}}">
-    <link rel="stylesheet" href="{{ asset('assets//css/meanmenu.min.css')}}">
-    <link rel="stylesheet" href="{{ asset('assets//css/animate.min.css')}}">
-    <link rel="stylesheet" href="{{ asset('assets//css/nice-select.min.css')}}">
-    <link rel="stylesheet" href="{{ asset('assets//css/viewer.min.css')}}">
-    <link rel="stylesheet" href="{{ asset('assets//css/slick.min.css')}}">
-    <link rel="stylesheet" href="{{ asset('assets//css/magnific-popup.min.css')}}">
-    <link rel="stylesheet" href="{{ asset('assets//css/style.css')}}">
-    <link rel="stylesheet" href="{{ asset('assets//css/dark.css')}}">
-    <link rel="stylesheet" href="{{ asset('assets//css/responsive.css')}}">
+    <!-- <link rel="stylesheet" href="{{ asset('frontend/assets/css/bootstrap.min')}}"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="{{ asset('frontend/assets/css/boxicons.min.')}}"> -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="{{ asset('frontend/assets/css/flaticon.')}}">
+    <link rel="stylesheet" href="{{ asset('frontend/assets/css/owl.carousel.min.')}}">
+    <link rel="stylesheet" href="{{ asset('frontend/assets/css/owl.theme.default.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('frontend/assets/css/odometer.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('frontend/assets/css/meanmenu.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('frontend/assets/css/animate.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('frontend/assets/css/nice-select.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('frontend/assets/css/viewer.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('frontend/assets/css/slick.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('frontend/assets/css/magnific-popup.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('frontend/assets/css/style.css')}}">
+    <link rel="stylesheet" href="{{ asset('frontend/assets/css/dark.css')}}">
+    <link rel="stylesheet" href="{{ asset('frontend/assets/css/responsive.css')}}">
 
     <title>LifeZone</title>
 
-    <link rel="icon" type="image/png" href="{{ asset('assets/img/lifezone1.2-removebg-preview.png')}}">
-    <link rel="stylesheet" href="{{ asset('assets/css/custom.css')}}">
+    <link rel="icon" type="image/png" href="{{ asset('frontend/assets/img/lifezone1.2-removebg-preview.png')}}">
+    <link rel="stylesheet" href="{{ asset('frontend/assets/css/custom.css')}}">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
 </head>
 
 <body>
 
+
+    <!-- Navbar -->
     <!-- Start Header Area -->
     <header class="header-area p-relative">
 
@@ -74,8 +78,8 @@
                     <div class="raque-responsive-menu">
                         <div class="logo">
                             <a href="index.html">
-                                <img src="{{ asset('assets/img/lifezone1.2-removebg-preview.png')}}" class="black-logo" alt="logo">
-                                <img src="{{ asset('assets/img/lifezone1.2-removebg-preview.png')}}" width="60" class="white-logo"
+                                <img src="{{ asset('frontend/assets/img/lifezone1.2-removebg-preview.png') }}" class="black-logo" alt="logo">
+                                <img src="{{ asset('frontend/assets/img/lifezone1.2-removebg-preview.png') }}" width="60" class="white-logo"
                                     alt="logo">
                             </a>
                         </div>
@@ -87,9 +91,9 @@
                 <div class="container">
                     <nav class="navbar navbar-expand-md navbar-light">
                         <a class="navbar-brand" href="index.html">
-                            <img src="{{ asset('assets/img/lifezone1.2-removebg-preview.png')}}" width="60" class="black-logo"
+                            <img src="{{ asset('frontend/assets/img/lifezone1.2-removebg-preview.png') }}" width="60" class="black-logo"
                                 alt="logo">
-                            <img src="{{ asset('assets/img/lifezone1.2-removebg-preview.png')}}" width="60" class="white-logo"
+                            <img src="{{ asset('frontend/assets/img/lifezone1.2-removebg-preview.') }}" width="60" class="white-logo"
                                 alt="logo">
                         </a>
 
@@ -122,9 +126,9 @@
                 <div class="container">
                     <nav class="navbar navbar-expand-md navbar-light">
                         <a class="navbar-brand" href="index.html">
-                            <img src="{{ asset('assets/img/lifezone1.2-removebg-preview.png')}}" width="60" class="black-logo"
+                            <img src="{{ asset('frontend/assets/img/lifezone1.2-removebg-preview.png') }}" width="60" class="black-logo"
                                 alt="logo">
-                            <img src="{{ asset('assets/img/lifezone1.2-removebg-preview.png')}}" width="60" class="white-logo"
+                            <img src="{{ asset('frontend/assets/img/lifezone1.2-removebg-preview.png') }}" width="60" class="white-logo"
                                 alt="logo">
                         </a>
 
@@ -154,8 +158,9 @@
     </header>
     <!-- End Header Area -->
 
-    <!-- Search Box Layout -->
-    <div class="search-overlay">
+
+     <!-- Search Box Layout -->
+     <div class="search-overlay">
         <div class="d-table">
             <div class="d-table-cell">
                 <div class="search-overlay-layer"></div>
@@ -178,9 +183,53 @@
     </div>
     <!-- End Search Box Layout -->
 
+    <section>
+
+
+<div class="col-lg-12">
+    <div class="banner-slides owl-carousel owl-theme">
+        <div class="banner1">
+            <img src="{{ asset('frontend/assets/img/1755.jpg') }}" alt="">
+
+        </div>
+        <div class="banner1">
+            <img src="{{ asset('frontend/assets/img/1755.jpg') }}" alt="">
+
+        </div>
+        <div class="banner1">
+            <img src="{{ asset('frontend/assets/img/1755.jpg') }}" alt="">
+
+        </div>
+        <div class="banner1">
+            <img src="{{ asset('frontend/assets/img/1755.jpg') }}" alt="">
+
+        </div>
+    </div>
+
+</div>
+
+
+</section>
+
+    
+
+    <!-- All Courses -->
+    @yield('allCourses')
+    <!-- Course Details -->
+    @yield('courseDetails')
+    <!-- Checkout -->
+    @yield('checkout')
+    <!-- Payment -->
+    @yield('payment')
+
 
     <!-- Home -->
-@yield('home')
+    @yield('home')
+
+
+
+
+
 
 
     <!-- Start Footer Area -->
@@ -189,7 +238,7 @@
             <div class="row">
 
                 <div class="col-lg-6 col-md-6 col-sm-6">
-                    <img src="{{ asset('assets/img/lifezone1.3.png') }}" alt="" width="100">
+                    <img src="assets/img/lifezone1.3.png" alt="" width="100">
                     <p class="textAlignment">Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Proin eget
                         tortor risus. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. </p>
                 </div>
@@ -250,44 +299,40 @@
 
 
     <!-- Links of JS files -->
-    <script src="{{ asset('assets/js/jquery.min.js')}}"></script>
-    <script src="{{ asset('assets/js/bootstrap.bundle.min.js')}}"></script>
-   
-    <script src="{{ asset('assets/js/owl.carousel.min.js')}}"></script>
-    <script src="{{ asset('assets/js/mixitup.min.js')}}"></script>
-    <script src="{{ asset('assets/js/parallax.min.js')}}"></script>
-    <script src="{{ asset('assets/js/jquery.appear.min.js')}}"></script>
-    <script src="{{ asset('assets/js/odometer.min.js')}}"></script>
-    <script src="{{ asset('assets/js/particles.min.js')}}"></script>
-    <script src="{{ asset('assets/js/meanmenu.min.js')}}"></script>
-    <script src="{{ asset('assets/js/jquery.nice-select.min.js')}}"></script>
-    <script src="{{ asset('assets/js/viewer.min.js')}}"></script>
-    <script src="{{ asset('assets/js/slick.min.js')}}"></script>
-    <script src="{{ asset('assets/js/jquery.magnific-popup.min.js')}}"></script>
-    <script src="{{ asset('assets/js/jquery.ajaxchimp.min.js')}}"></script>
-    <script src="{{ asset('assets/js/form-validator.min.js')}}"></script>
-    <script src="{{ asset('assets/js/contact-form-script.js')}}"></script>
-    <script src="{{ asset('assets/js/main.js')}}"></script>
+    <script src="{{ asset('frontend/assets/js/jquery.min.js')}}"></script>
+    <script src="{{ asset('frontend/assets/js/bootstrap.bundle.min.js')}}"></script>
+    <script src="{{ asset('frontend/assets/js/owl.carousel.min.js')}}"></script>
+    <script src="{{ asset('frontend/assets/js/mixitup.min.js')}}"></script>
+    <script src="{{ asset('frontend/assets/js/parallax.min.js')}}"></script>
+    <script src="{{ asset('frontend/assets/js/jquery.appear.min.js')}}"></script>
+    <script src="{{ asset('frontend/assets/js/odometer.min.js')}}"></script>
+    <script src="{{ asset('frontend/assets/js/particles.min.js')}}"></script>
+    <script src="{{ asset('frontend/assets/js/meanmenu.min.js')}}"></script>
+    <script src="{{ asset('frontend/assets/js/jquery.nice-select.min.js')}}"></script>
+    <script src="{{ asset('frontend/assets/js/viewer.min.js')}}"></script>
+    <script src="{{ asset('frontend/assets/js/slick.min.js')}}"></script>
+    <script src="{{ asset('frontend/assets/js/jquery.magnific-popup.min.js')}}"></script>
+    <script src="{{ asset('frontend/assets/js/jquery.ajaxchimp.min.js')}}"></script>
+    <script src="{{ asset('frontend/assets/js/form-validator.min.js')}}"></script>
+    <script src="{{ asset('frontend/assets/js/contact-form-script.js')}}"></script>
+    <script src="{{ asset('frontend/assets/js/main.js')}}"></script>
 
     <!-- Slider Revolution core JavaScript files -->
-    <script src="{{ asset('assets/revolution/js/jquery.themepunch.tools.min.js')}}"></script>
-    <script src="{{ asset('assets/revolution/js/jquery.themepunch.revolution.min.js')}}"></script>
-    <script src="{{ asset('assets/revolution/js/extensions/revolution.extension.actions.min.js')}}"></script>
-    <script src="{{ asset('assets/revolution/js/extensions/revolution.extension.carousel.min.js')}}"></script>
-    <script src="{{ asset('assets/revolution/js/extensions/revolution.extension.kenburn.min.js')}}"></script>
-    <script src="{{ asset('assets/revolution/js/extensions/revolution.extension.layeranimation.min.js')}}"></script>
-    <script src="{{ asset('assets/revolution/js/extensions/revolution.extension.migration.min.js')}}"></script>
-    <script src="{{ asset('assets/revolution/js/extensions/revolution.extension.navigation.min.js')}}"></script>
-    <script src="{{ asset('assets/revolution/js/extensions/revolution.extension.parallax.min.js')}}"></script>
-    <script src="{{ asset('assets/revolution/js/extensions/revolution.extension.slideanims.min.js')}}"></script>
-    <script src="{{ asset('assets/revolution/js/extensions/revolution.extension.video.min.js')}}"></script>
-    <script src="{{ asset('assets/js/rev-slider-custom.js')}}"></script>
-    <script>
-        $("#remove").click(function () {
-            $(".banner1").slideUp('slow');
-        });
-
+    <script src="{{ asset('frontend/assets/revolution/js/jquery.themepunch.tools.min.js')}}"></script>
+    <script src="{{ asset('frontend/assets/revolution/js/jquery.themepunch.revolution.min.js')}}"></script>
+    <script src="{{ asset('frontend/assets/revolution/js/extensions/revolution.extension.actions.min.js')}}"></script>
+    <script src="{{ asset('frontend/assets/revolution/js/extensions/revolution.extension.carousel.min.js')}}"></script>
+    <script src="{{ asset('frontend/assets/revolution/js/extensions/revolution.extension.kenburn.min.js')}}"></script>
+    <script src="{{ asset('frontend/assets/revolution/js/extensions/revolution.extension.layeranimation.min.js')}}">
     </script>
+    <script src="{{ asset('frontend/assets/revolution/js/extensions/revolution.extension.migration.min.js')}}"></script>
+    <script src="{{ asset('frontend/assets/revolution/js/extensions/revolution.extension.navigation.min.js')}}">
+    </script>
+    <script src="{{ asset('frontend/assets/revolution/js/extensions/revolution.extension.parallax.min.js')}}"></script>
+    <script src="{{ asset('frontend/assets/revolution/js/extensions/revolution.extension.slideanims.min.js')}}">
+    </script>
+    <script src="{{ asset('frontend/assets/revolution/js/extensions/revolution.extension.video.min.js')}}"></script>
+    <script src="{{ asset('frontend/assets/js/rev-slider-custom.js')}}"></script>
 </body>
 
 </html>

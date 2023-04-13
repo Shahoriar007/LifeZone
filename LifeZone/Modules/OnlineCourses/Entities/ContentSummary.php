@@ -9,7 +9,10 @@ class ContentSummary extends Model
 {
     use HasFactory;
 
-    protected $fillable = [];
+    protected $fillable = [
+        'summary_title',
+        'course_id',
+    ];
     
     protected static function newFactory()
     {

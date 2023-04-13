@@ -11,24 +11,28 @@
     <meta name="robots" content="noindex, nofollow">
     <title>LifeZone Admin</title>
 
-    <link rel="shortcut icon" type="image/x-icon" href="frontendAdmin/assets/img/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('frontendAdmin/assets/img/favicon.png') }}">
 
-    <link rel="stylesheet" href="frontendAdmin/assets/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="{{ asset('frontendAdmin/assets/css/bootstrap.min.css') }}"> -->
+   
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="frontendAdmin/assets/css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="{{ asset('frontendAdmin/assets/css/bootstrap-datetimepicker.min.css') }}">
 
-    <link rel="stylesheet" href="frontendAdmin/assets/css/animate.css">
+    <link rel="stylesheet" href="{{ asset('frontendAdmin/assets/css/animate.css') }}">
 
-    <link rel="stylesheet" href="frontendAdmin/assets/plugins/select2/css/select2.min.css">
+    <link rel="stylesheet" href="{{ asset('frontendAdmin/assets/plugins/select2/css/select2.min.css') }}">
 
-    <link rel="stylesheet" href="frontendAdmin/assets/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="{{ asset('frontendAdmin/assets/css/dataTables.bootstrap4.min.css') }}">
 
-    <link rel="stylesheet" href="frontendAdmin/assets/plugins/fontawesome/css/fontawesome.min.css">
-    <link rel="stylesheet" href="frontendAdmin/assets/plugins/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="{{ asset('frontendAdmin/assets/plugins/fontawesome/css/fontawesome.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('frontendAdmin/assets/plugins/fontawesome/css/all.min.css') }}">
 
-    <link rel="stylesheet" href="frontendAdmin/assets/css/style.css">
+    <link rel="stylesheet" href="{{ asset('frontendAdmin/assets/css/style.css') }}">
     <!--new add-->
-    <link rel="stylesheet" type="text/css" href="frontendAdmin/assets/css/jquery.dataTables.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('frontendAdmin/assets/css/jquery.dataTables.css') }}">
+
+    @yield('contentList_Style')
 
 </head>
 
@@ -43,13 +47,13 @@
 
             <div class="header-left active">
                 <a href="index.html" class="logo logo-normal">
-                    <img src="frontendAdmin/assets/img/logo.png" alt="">
+                    <img src="{{ asset('frontendAdmin/assets/img/logo.png') }}" alt="">
                 </a>
                 <a href="index.html" class="logo logo-white">
-                    <img src="frontendAdmin/assets/img/logo-white.png" alt="">
+                    <img src="{{ asset('frontendAdmin/assets/img/logo-white.png') }}" alt="">
                 </a>
                 <a href="index.html" class="logo-small">
-                    <img src="frontendAdmin/assets/img/logo-small.png" alt="">
+                    <img src="{{ asset('frontendAdmin/assets/img/logo-small.png') }}" alt="">
                 </a>
                 <a id="toggle_btn" href="javascript:void(0);">
                 </a>
@@ -80,7 +84,7 @@
 
                 <li class="nav-item dropdown">
                     <a href="javascript:void(0);" class="dropdown-toggle nav-link" data-bs-toggle="dropdown">
-                        <img src="frontendAdmin/assets/img/icons/notification-bing.svg" alt="img"> <span
+                        <img src="{{ asset('frontendAdmin/assets/img/icons/notification-bing.svg') }}" alt="img"> <span
                             class="badge rounded-pill">4</span>
                     </a>
                     <div class="dropdown-menu notifications">
@@ -94,7 +98,7 @@
                                     <a href="activities.html">
                                         <div class="media d-flex">
                                             <span class="avatar flex-shrink-0">
-                                                <img alt="" src="frontendAdmin/assets/img/profiles/avatar-02.jpg">
+                                                <img alt="" src="{{ asset('frontendAdmin/assets/img/profiles/avatar-02.jpg') }}">
                                             </span>
                                             <div class="media-body flex-grow-1">
                                                 <p class="noti-details"><span class="noti-title">John Doe</span> added
@@ -110,7 +114,7 @@
                                     <a href="activities.html">
                                         <div class="media d-flex">
                                             <span class="avatar flex-shrink-0">
-                                                <img alt="" src="frontendAdmin/assets/img/profiles/avatar-03.jpg">
+                                                <img alt="" src="{{ asset('frontendAdmin/assets/img/profiles/avatar-03.jpg') }}">
                                             </span>
                                             <div class="media-body flex-grow-1">
                                                 <p class="noti-details"><span class="noti-title">Tarah Shropshire</span>
@@ -126,7 +130,7 @@
                                     <a href="activities.html">
                                         <div class="media d-flex">
                                             <span class="avatar flex-shrink-0">
-                                                <img alt="" src="frontendAdmin/assets/img/profiles/avatar-06.jpg">
+                                                <img alt="" src="{{ asset('frontendAdmin/assets/img/profiles/avatar-06.jpg') }}">
                                             </span>
                                             <div class="media-body flex-grow-1">
                                                 <p class="noti-details"><span class="noti-title">Misty Tison</span>
@@ -143,7 +147,7 @@
                                     <a href="activities.html">
                                         <div class="media d-flex">
                                             <span class="avatar flex-shrink-0">
-                                                <img alt="" src="frontendAdmin/assets/img/profiles/avatar-17.jpg">
+                                                <img alt="" src="{{ asset('frontendAdmin/assets/img/profiles/avatar-17.jpg') }}">
                                             </span>
                                             <div class="media-body flex-grow-1">
                                                 <p class="noti-details"><span class="noti-title">Rolland Webber</span>
@@ -159,7 +163,7 @@
                                     <a href="activities.html">
                                         <div class="media d-flex">
                                             <span class="avatar flex-shrink-0">
-                                                <img alt="" src="frontendAdmin/assets/img/profiles/avatar-13.jpg">
+                                                <img alt="" src="{{ asset('frontendAdmin/assets/img/profiles/avatar-13.jpg') }}">
                                             </span>
                                             <div class="media-body flex-grow-1">
                                                 <p class="noti-details"><span class="noti-title">Bernardo Galaviz</span>
@@ -181,13 +185,13 @@
 
                 <li class="nav-item dropdown has-arrow main-drop">
                     <a href="javascript:void(0);" class="dropdown-toggle nav-link userset" data-bs-toggle="dropdown">
-                        <span class="user-img"><img src="frontendAdmin/assets/img/profiles/avator1.jpg" alt="">
+                        <span class="user-img"><img src="{{ asset('frontendAdmin/assets/img/profiles/avator1.jpg') }}" alt="">
                             <span class="status online"></span></span>
                     </a>
                     <div class="dropdown-menu menu-drop-user">
                         <div class="profilename">
                             <div class="profileset">
-                                <span class="user-img"><img src="frontendAdmin/assets/img/profiles/avator1.jpg" alt="">
+                                <span class="user-img"><img src="{{ asset('frontendAdmin/assets/img/profiles/avator1.jpg') }}" alt="">
                                     <span class="status online"></span></span>
                                 <div class="profilesets">
                                     <h6>John Doe</h6>
@@ -201,7 +205,7 @@
                                     data-feather="settings"></i>Settings</a>
                             <hr class="m-0">
                             <a class="dropdown-item logout pb-0" href="signin.html"><img
-                                    src="frontendAdmin/assets/img/icons/log-out.svg" class="me-2" alt="img">Logout</a>
+                                    src="{{ asset('frontendAdmin/assets/img/icons/log-out.svg') }}" class="me-2" alt="img">Logout</a>
                         </div>
                     </div>
                 </li>
@@ -226,15 +230,33 @@
                 <div id="sidebar-menu" class="sidebar-menu">
                     <ul>
                         <li>
-                            <a href="index.html"><img src="frontendAdmin/assets/img/icons/dashboard.svg" alt="img"><span>
+                            <a href="index.html"><img src="{{ asset('frontendAdmin/assets/img/icons/dashboard.svg') }}" alt="img"><span>
                                     Dashboard</span> </a>
                         </li>
 
                         <li class="submenu">
-                            <a href=""><img src="frontendAdmin/assets/img/icons/time.svg" alt="img"><span>
+                            <a href=""><img src="{{ asset('frontendAdmin/assets/img/icons/time.svg') }}" alt="img"><span>
                                     Courses Category</span> <span class="menu-arrow"></span></a>
                             <ul>
                                 <li><a href="{{ route('course_category') }}">Cagtegory List</a></li>
+                               
+                            </ul>
+                        </li>
+
+                        <li class="submenu">
+                            <a href=""><img src="{{ asset('frontendAdmin/assets/img/icons/time.svg') }}" alt="img"><span>
+                                    Courses</span> <span class="menu-arrow"></span></a>
+                            <ul>
+                                <li><a href="{{ route('courses-list') }}">Courses List</a></li>
+                               
+                            </ul>
+                        </li>
+
+                        <li class="submenu">
+                            <a href=""><img src="{{ asset('frontendAdmin/assets/img/icons/time.svg') }}" alt="img"><span>
+                                    Appointments</span> <span class="menu-arrow"></span></a>
+                            <ul>
+                                <li><a href="https://doctorappointment.aveenirit.com/admin/appointment/page">Take Appointments</a></li>
                                
                             </ul>
                         </li>
@@ -251,88 +273,49 @@
        @yield('courseCategoryList')
        <!-- Add Category -->
        @yield('addCourseCategory')
-
+       <!-- Course List -->
+       @yield('courseList')
+       <!-- Add Course -->
+       @yield('addCourse')
+       <!-- Course Content List -->
+       @yield('courseContentList')
+        <!-- Course Content Summary -->
+       @yield('addCourseContentSummary')
+       <!-- Course Content -->
+       @yield('addCourseContent')
 
     </div>
 
     
-    <script src="frontendAdmin/assets/js/jquery-3.6.0.min.js"></script>
+    <script src="{{ asset('frontendAdmin/assets/js/jquery-3.6.0.min.js') }}"></script>
 
-    <script src="frontendAdmin/assets/js/feather.min.js"></script>
+    <script src="{{ asset('frontendAdmin/assets/js/feather.min.js') }}"></script>
 
-    <script src="frontendAdmin/assets/js/jquery.slimscroll.min.js"></script>
+    <script src="{{ asset('frontendAdmin/assets/js/jquery.slimscroll.min.js') }}"></script>
 
-    <script src="frontendAdmin/assets/js/jquery.dataTables.min.js"></script>
-    <script src="frontendAdmin/assets/js/dataTables.bootstrap4.min.js"></script>
+    <script src="{{ asset('frontendAdmin/assets/js/jquery.dataTables.min.js') }}"></script>
+    <script src="{{ asset('frontendAdmin/assets/js/dataTables.bootstrap4.min.js') }}"></script>
 
-    <script src="frontendAdmin/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ asset('frontendAdmin/assets/js/bootstrap.bundle.min.js') }}"></script>
 
-    <script src="frontendAdmin/assets/js/moment.min.js"></script>
-    <script src="frontendAdmin/assets/js/bootstrap-datetimepicker.min.js"></script>
+    <script src="{{ asset('frontendAdmin/assets/js/moment.min.js') }}"></script>
+    <script src="{{ asset('frontendAdmin/assets/js/bootstrap-datetimepicker.min.js') }}"></script>
 
-    <script src="frontendAdmin/assets/plugins/select2/js/select2.min.js"></script>
+    <script src="{{ asset('frontendAdmin/assets/plugins/select2/js/select2.min.js') }}"></script>
 
-    <script src="frontendAdmin/assets/plugins/sweetalert/sweetalert2.all.min.js"></script>
-    <script src="frontendAdmin/assets/plugins/sweetalert/sweetalerts.min.js"></script>
+    <script src="{{ asset('frontendAdmin/assets/plugins/sweetalert/sweetalert2.all.min.js') }}"></script>
+    <script src="{{ asset('frontendAdmin/assets/plugins/sweetalert/sweetalerts.min.js') }}"></script>
 
-    <script src="frontendAdmin/assets/js/script.js"></script>
+    <script src="{{ asset('frontendAdmin/assets/js/script.js') }}"></script>
      <!--new add-->
     <script type="text/javascript" src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.js"></script>
+
+    <!-- CK editor -->
+    <script src="https://cdn.ckeditor.com/ckeditor5/37.0.1/classic/ckeditor.js"></script>
+
+    @yield('ck-editor')
      
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-      // Add a text input to each header cell for columns with indices 0, 2, and 3
-      var table = document.querySelector("#example");
-      var headerRow = table.querySelector("thead tr");
-      var filterRow = headerRow.cloneNode(true);
-      filterRow.classList.add("filters");
-      headerRow.after(filterRow);
     
-      var dataTable = new DataTable("#example", {
-        orderCellsTop: true,
-        fixedHeader: true,
-        initComplete: function() {
-          var api = this.api();
-    
-          // For each column with indices 0, 2, and 3
-          api.columns([1, 2, 3,4,5,6,7,8]).eq(0).each(function(colIdx) {
-            // Set the header cell to contain the input element
-            var cell = filterRow.querySelectorAll("th")[colIdx];
-            var title = cell.textContent;
-            cell.innerHTML = '<input type="text" placeholder="' + title + '" />';
-    
-            // On every keypress in this input
-            var input = cell.querySelector("input");
-            input.addEventListener("change", function(e) {
-              // Get the search value
-              var value = this.value;
-              this.setAttribute("title", value);
-              var regexr = "({search})";
-              var searchValue = value != "" ? regexr.replace("{search}", "(((" + value + ")))") : "";
-    
-              // Search the column for that value
-              api.column(colIdx).search(searchValue, true, false).draw();
-            });
-    
-            input.addEventListener("keyup", function(e) {
-              e.stopPropagation();
-              input.dispatchEvent(new Event("change"));
-              input.setSelectionRange(cursorPosition, cursorPosition);
-            });
-          });
-          
-          // Hide the header cells for columns other than 0, 2, and 3
-          var headerCells = filterRow.querySelectorAll("th");
-          for (var i = 0; i < headerCells.length; i++) {
-            if (![1, 2, 3,4,5,6,7,8].includes(i)) {
-              headerCells[i].innerHTML = "<th></th>";
-            }
-          }
-        }
-      });
-    });
-    
-       </script>
 </body>
 
 </html>

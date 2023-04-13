@@ -1,5 +1,5 @@
 @extends('admin.adminMaster')
-@section('courseCategoryList')
+@section('courseList')
 
 <div class="page-wrapper">
     <div class="content">
@@ -9,8 +9,8 @@
                 
             </div>
             <div class="page-btn">
-                <a href="{{ route('add_course_category_view') }}" class="btn btn-added">
-                    <img src="frontendAdmin/assets/img/icons/plus.svg" alt="img">Add New Category
+                <a href="{{ route('add_course_view') }}" class="btn btn-added">
+                    <img src="frontendAdmin/assets/img/icons/plus.svg" alt="img">Add New Course
                 </a>
             </div>
         </div>
@@ -48,13 +48,21 @@
                                         <span class="checkmarks">Select</span>
                                     </label>
                                 </th>
-                                <th>Category Name</th>
+                                <th>Course Title</th>
+                                <th>Course Category</th>
+                                <th>Instructor</th>
+                                <th>Price</th>
+                                <th>Offer Price</th>
+                                <th>Validity</th>
+                                <th>Course Contents</th>
+
                                 <th>Action</th>
+                                
                             </tr>
                         </thead>
                         <tbody>
 
-                        @foreach($courseCategorys as $courseCategory)
+                        @foreach($courses as $item)
 
                             <tr>
                                 <td>
@@ -63,12 +71,26 @@
                                         <span class="checkmarks"></span>
                                     </label>
                                 </td>
-                                <td class="text-bolds">{{ $courseCategory->category_name }}</td>
+
+                                <td class="text-bolds">{{ $item->title }}</td>
+                                <td class="text-bolds">{{ $item->courseCategoryName }}</td>
+                                <td class="text-bolds">{{ $item->instructor }}</td>
+                                <td class="text-bolds">{{ $item->price }}</td>
+                                <td class="text-bolds">{{ $item->offer_price }}</td>
+                                <td class="text-bolds">{{ $item->validity }}</td>
+
+                                <td>
+                                    <a class="me-3 btn btn-outline-info" href="{{ url('/course-content-list/' . $item->id) }}">
+                                        Content
+                                    </a>
+                                </td>
+
+
                                 <td>
                                     <a class="me-3" href="editpurchase.html">
                                         <img src="frontendAdmin/assets/img/icons/edit.svg" alt="img">
                                     </a>
-                                    <a class="me-3 confirm-text" href="{{ route('delete_course_category', ['id' => $courseCategory->id] ) }}">
+                                    <a class="me-3 confirm-text" href="{{ route('delete_course', ['id' => $item->id] ) }}">
                                         <img src="frontendAdmin/assets/img/icons/delete.svg" alt="img">
                                     </a>
                                 </td>
@@ -132,7 +154,7 @@
           // Hide the header cells for columns other than 0, 2, and 3
           var headerCells = filterRow.querySelectorAll("th");
           for (var i = 0; i < headerCells.length; i++) {
-            if (![1, 2, 3,4,5,6,7,8].includes(i)) {
+            if (![1, 2, 3,4,5,6,8].includes(i)) {
               headerCells[i].innerHTML = "<th></th>";
             }
           }

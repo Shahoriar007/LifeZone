@@ -4,6 +4,9 @@ use Modules\OnlineCourses\Http\Controllers\CourseController;
 use Modules\OnlineCourses\Http\Controllers\CoursePaymentController;
 
 use Modules\OnlineCourses\Http\Controllers\CourseCategoryController;
+use Modules\OnlineCourses\Http\Controllers\AdminCourseController;
+use Modules\OnlineCourses\Http\Controllers\CourseContentController;
+use Modules\OnlineCourses\Http\Controllers\CourseContentSummaryController;
 
 
 /*
@@ -44,6 +47,7 @@ Route::get('/course-payment/{id}', [CoursePaymentController::class, 'course_paym
 
 // Admin side
 
+// ----------------------------------Course Category Start-----------------------------
 // Course Category List
 Route::get('/course-category', [CourseCategoryController::class, 'index'])->name('course_category');
 // Add Course Category from View
@@ -52,3 +56,42 @@ Route::get('/add_course-category', [CourseCategoryController::class, 'createInde
 Route::post('/add_course-category', [CourseCategoryController::class, 'store'])->name('add_course_category');
 // Delete Category
 Route::get('/add_course-category/{id}', [CourseCategoryController::class, 'destroy'])->name('delete_course_category');
+
+// ----------------------------------Course Category End-----------------------------
+
+
+
+// ----------------------------------Course Start-----------------------------
+// Course  List
+Route::get('/courses-list', [AdminCourseController::class, 'index'])->name('courses-list');
+// Add Course from View
+Route::get('/add_course', [AdminCourseController::class, 'createIndex'])->name('add_course_view');
+// Store Course 
+Route::post('/add_course', [AdminCourseController::class, 'store'])->name('add_course');
+// Delete Course
+Route::get('/add_course/{id}', [AdminCourseController::class, 'destroy'])->name('delete_course');
+
+// ----------------------------------Course Ends-----------------------------
+
+
+// ----------------------------------Course Contents-----------------------------
+// Contents list
+Route::get('/course-content-list/{id}', [CourseContentController::class, 'index'])->name('course_content_list');
+// Add Content form View
+Route::get('/add-course-content/{id}', [CourseContentController::class, 'createContent'])->name('add_course_video_view');
+// Store Content 
+Route::post('/store-course-content', [CourseContentController::class, 'store'])->name('add_course_content');
+// Delete Content 
+Route::get('/delete-course-content/{id}', [CourseContentController::class, 'destroy'])->name('delete_course_content');
+
+
+
+// ----------------------------------Course Content Summary Starts-----------------------------
+// Add course Summary form View
+Route::get('/add-course-summary-view/{id}', [CourseContentSummaryController::class, 'index'])->name('add_course_summary_view');
+// Store Course Summary
+Route::post('/add-course-summary', [CourseContentSummaryController::class, 'store'])->name('add_course_summary');
+// Delete Course Summary
+Route::get('/add-course-summary/{id}', [CourseContentSummaryController::class, 'destroy'])->name('delete_course_summary');
+
+// ----------------------------------Course Content Summary Ends-----------------------------

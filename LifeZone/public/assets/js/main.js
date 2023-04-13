@@ -131,12 +131,34 @@ jQuery(function ($) {
             }
         }
     });
-
+    
+        // banner Slides
+        $('.banner-slides').owlCarousel({
+            loop: true,
+            nav: false,
+            dots: true,
+            autoplayHoverPause: false,
+            autoplay: true,
+            navRewind: false,
+            margin: 0,
+           
+            responsive: {
+                0: {
+                    items: 1,
+                },
+                768: {
+                    items: 1,
+                },
+                1200: {
+                    items: 1,
+                }
+            }
+        });
     // Courses Slides
     $('.courses-slides').owlCarousel({
-        loop: false,
+        loop: true,
         nav: true,
-        dots: true,
+        dots: false,
         autoplayHoverPause: true,
         autoplay: true,
         navRewind: false,
@@ -147,7 +169,7 @@ jQuery(function ($) {
         ],
         responsive: {
             0: {
-                items: 1,
+                items: 1.5,
             },
             768: {
                 items: 2,
@@ -172,7 +194,7 @@ jQuery(function ($) {
         ],
         responsive: {
             0: {
-                items: 1,
+                items: 1.5,
             },
             768: {
                 items: 2,
@@ -185,7 +207,7 @@ jQuery(function ($) {
 
     // Team Slides
     $('.team-slides').owlCarousel({
-        loop: false,
+        loop: true,
         nav: true,
         dots: false,
         autoplayHoverPause: true,
@@ -198,7 +220,7 @@ jQuery(function ($) {
         ],
         responsive: {
             0: {
-                items: 1,
+                items: 1.5,
             },
             576: {
                 items: 2,
@@ -993,3 +1015,4 @@ function toggleTheme() {
 	  document.getElementById('slider').checked = true;
 	}
 })();
+
