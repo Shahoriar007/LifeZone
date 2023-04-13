@@ -15,9 +15,9 @@ use App\Http\Controllers\HomeController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 
 Route::middleware('auth')->group(function () {
@@ -34,6 +34,7 @@ Route::middleware('auth')->group(function () {
 });
 
 
-Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/about', [HomeController::class, 'aboutIndex'])->name('about');
 
 require __DIR__.'/auth.php';
