@@ -66,7 +66,7 @@
                             <div class="card-title">Our Courses</div>
                         </div>
                         <div class="card-footer d-flex justify-content-center">
-                            <a href="courses.html"><i class='bx bx-right-arrow-alt'></i></a>
+                            <a href="{{ route('courses') }}"><i class='bx bx-right-arrow-alt'></i></a>
                         </div>
                     </div>
                 </div>
@@ -141,7 +141,7 @@
         <div class="container">
             <div class="section-title text-left">
                 <h2>Our Courses</h2>
-                <a href="courses.html" class="default-btn"><i class='bx bx-show-alt icon-arrow before'></i><span
+                <a href="{{ route('courses') }}" class="default-btn"><i class='bx bx-show-alt icon-arrow before'></i><span
                         class="label">View All</span><i class="bx bx-show-alt icon-arrow after"></i></a>
             </div>
 
