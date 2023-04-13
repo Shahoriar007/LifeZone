@@ -97,7 +97,7 @@
                             <ul class="navbar-nav">
                                 <li class="nav-item"><a href="{{ route('home') }}" class="nav-link">Home</a></li>
                                 <li class="nav-item"><a href="{{ route('about') }}" class="nav-link">About</a></li>
-                                <li class="nav-item"><a href="courses.html" class="nav-link">Courses</a></li>
+                                <li class="nav-item"><a href="{{ route('courses') }}" class="nav-link">Courses</a></li>
                                 <li class="nav-item"><a href="doctor.html" class="nav-link">Our Doctors</a></li>
                                 <li class="nav-item"><a href="media.html" class="nav-link">Media</a></li>
                                 <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
@@ -130,9 +130,9 @@
 
                         <div class="collapse navbar-collapse">
                             <ul class="navbar-nav">
-                                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-                                <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-                                <li class="nav-item"><a href="courses.html" class="nav-link">Courses</a></li>
+                                <li class="nav-item"><a href="{{ route('home') }}" class="nav-link">Home</a></li>
+                                <li class="nav-item"><a href="{{ route('about') }}" class="nav-link">About</a></li>
+                                <li class="nav-item"><a href="{{ route('courses') }}" class="nav-link">Courses</a></li>
                                 <li class="nav-item"><a href="doctor.html" class="nav-link">Our Doctors</a></li>
                                 <li class="nav-item"><a href="media.html" class="nav-link">Media</a></li>
                                 <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
