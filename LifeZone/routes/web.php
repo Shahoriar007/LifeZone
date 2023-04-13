@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ProblemCounsellingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,5 +37,11 @@ Route::middleware('auth')->group(function () {
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/about', [HomeController::class, 'aboutIndex'])->name('about');
+
+// problem_counselling
+Route::get('/problem-counselling', [ProblemCounsellingController::class, 'index'])->name('problem_counselling');
+
+// problem_counselling_details
+Route::get('/problem-counselling-details', [ProblemCounsellingController::class, 'indexDetails'])->name('problem_counselling_details');
 
 require __DIR__.'/auth.php';

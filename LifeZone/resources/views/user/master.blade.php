@@ -192,6 +192,11 @@
     <!-- Payment -->
     @yield('payment')
 
+    <!-- allProblemCounselling -->
+    @yield('allProblemCounselling')
+
+    <!-- problemCounsellingDetails -->
+    @yield('problemCounsellingDetails')
 
 
     <!-- Start Footer Area -->

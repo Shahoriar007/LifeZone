@@ -77,7 +77,7 @@
                             <div class="card-title">Problem/Dieseas base Psychological Counselling</div>
                         </div>
                         <div class="card-footer d-flex justify-content-center">
-                            <a href="category-courses.html"><i class='bx bx-right-arrow-alt'></i></a>
+                            <a href="{{ route('problem_counselling') }}"><i class='bx bx-right-arrow-alt'></i></a>
                         </div>
                     </div>
                 </div>
