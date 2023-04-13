@@ -181,6 +181,15 @@
 
     <!-- Home -->
 @yield('home')
+<!-- All Courses -->
+@yield('allCourses')
+    <!-- Course Details -->
+    @yield('courseDetails')
+    <!-- Checkout -->
+    @yield('checkout')
+    <!-- Payment -->
+    @yield('payment')
+
 
 
     <!-- Start Footer Area -->

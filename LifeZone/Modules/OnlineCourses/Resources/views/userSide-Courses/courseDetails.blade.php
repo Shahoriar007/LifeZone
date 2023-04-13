@@ -87,7 +87,7 @@
             <div class="col-lg-4 courses-content-video">
                 <div class="courses-sidebar-information ">
                     <div class="faq-video">
-                        <img src="{{asset('frontend/assets/img/courses/4.2.jpg')}}" alt="image">
+                        <img src="{{asset('assets/img/courses/4.2.jpg')}}" alt="image">
 
                         <a href="https://www.youtube.com/watch?v=Le5GAGg-ZlA" class="video-btn popup-youtube"><i
                                 class="bx bx-play"></i></a>
