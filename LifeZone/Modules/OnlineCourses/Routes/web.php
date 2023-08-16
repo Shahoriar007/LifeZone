@@ -23,11 +23,11 @@ use Modules\OnlineCourses\Http\Controllers\CourseContentSummaryController;
 Route::prefix('onlinecourses')->group(function() {
     Route::get('/', 'OnlineCoursesController@index');
 
-    
+
 });
 
 
-// User Side 
+// User Side
 
 // All course
  Route::get('/courses', [CourseController::class, 'index'])->name('courses');
@@ -40,10 +40,13 @@ Route::get('/course-checkout/{id}', [CourseController::class, 'course_checkout_i
 
 Route::middleware('auth')->group(function () {
 
+//User side
 // Course payment
 Route::get('/course-payment/{id}', [CoursePaymentController::class, 'course_payment_index'])->name('course-payment');
-    
-});
+// Course
+Route::post('/confirm-course-payment/{id}', [CoursePaymentController::class, 'confirm_course_payment'])->name('confirm-course-payment');
+// My courses
+// --------------------->write a route for all my course list
 
 // Admin side
 
@@ -66,7 +69,7 @@ Route::get('/add_course-category/{id}', [CourseCategoryController::class, 'destr
 Route::get('/courses-list', [AdminCourseController::class, 'index'])->name('courses-list');
 // Add Course from View
 Route::get('/add_course', [AdminCourseController::class, 'createIndex'])->name('add_course_view');
-// Store Course 
+// Store Course
 Route::post('/add_course', [AdminCourseController::class, 'store'])->name('add_course');
 // Delete Course
 Route::get('/add_course/{id}', [AdminCourseController::class, 'destroy'])->name('delete_course');
@@ -79,9 +82,9 @@ Route::get('/add_course/{id}', [AdminCourseController::class, 'destroy'])->name(
 Route::get('/course-content-list/{id}', [CourseContentController::class, 'index'])->name('course_content_list');
 // Add Content form View
 Route::get('/add-course-content/{id}', [CourseContentController::class, 'createContent'])->name('add_course_video_view');
-// Store Content 
+// Store Content
 Route::post('/store-course-content', [CourseContentController::class, 'store'])->name('add_course_content');
-// Delete Content 
+// Delete Content
 Route::get('/delete-course-content/{id}', [CourseContentController::class, 'destroy'])->name('delete_course_content');
 
 
@@ -95,3 +98,7 @@ Route::post('/add-course-summary', [CourseContentSummaryController::class, 'stor
 Route::get('/add-course-summary/{id}', [CourseContentSummaryController::class, 'destroy'])->name('delete_course_summary');
 
 // ----------------------------------Course Content Summary Ends-----------------------------
+
+
+});
+

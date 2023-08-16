@@ -13,7 +13,7 @@ use Modules\OnlineCourses\Entities\CourseContent;
 
 class CourseContentController extends Controller
 {
-    
+
     public function index($id)
     {
         $contents = ContentSummary::where('course_id', '=', $id)->get();
@@ -21,11 +21,11 @@ class CourseContentController extends Controller
         return view('onlinecourses::adminSide-Courses.courseContentList',compact('contents','id'));
     }
 
-    
+
     public function createContent($id)
     {
         return view('onlinecourses::adminSide-Courses.addCourseContent', compact('id'));
-        
+
     }
 
     public function store(Request $request)
@@ -42,20 +42,23 @@ class CourseContentController extends Controller
 
         ]);
 
-        $courseId = CourseContent::where('content_summary_id', '=', $request->content_summary_id)->get();
+        $courseId = ContentSummary::where('id', '=', $request->content_summary_id)->get();
 
-        return redirect()->route('course_content_list', $courseId[0]->course_id);
+       return redirect()->route('course_content_list', $courseId[0]->course_id);
 
 
     }
 
-    
+
 
     public function destroy($id)
     {
-        
+
         CourseContent::findOrFail($id)->delete();
 
         return redirect()->back();
     }
+
+    // ----------------> write a function to that show all my course list
+    
 }

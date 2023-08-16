@@ -13,7 +13,7 @@
 
     <!-- Links of CSS files -->
     <link rel="stylesheet" href="{{ asset('assets//css/bootstrap.min.css')}}">
-    
+
     <link rel="stylesheet" href="{{ asset('assets//css/boxicons.min.css')}}">
     <link rel="stylesheet" href="{{ asset('assets//css/flaticon.css')}}">
     <link rel="stylesheet" href="{{ asset('assets//css/owl.carousel.min.css')}}">
@@ -60,7 +60,7 @@
 
                     <div class="col-lg-4 col-md-4 col-4">
                         <ul class="top-header-login-register">
-                            <li><a href="login.html"><i class='bx bx-log-in'></i> Login</a></li>
+                            <li><a href="{{ route('login') }}"><i class='bx bx-log-in'></i> Login</a></li>
                         </ul>
                     </div>
                 </div>
@@ -268,7 +268,7 @@
     <!-- Links of JS files -->
     <script src="{{ asset('assets/js/jquery.min.js')}}"></script>
     <script src="{{ asset('assets/js/bootstrap.bundle.min.js')}}"></script>
-   
+
     <script src="{{ asset('assets/js/owl.carousel.min.js')}}"></script>
     <script src="{{ asset('assets/js/mixitup.min.js')}}"></script>
     <script src="{{ asset('assets/js/parallax.min.js')}}"></script>

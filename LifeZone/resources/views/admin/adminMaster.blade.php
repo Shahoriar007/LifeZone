@@ -14,7 +14,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('frontendAdmin/assets/img/favicon.png') }}">
 
     <!-- <link rel="stylesheet" href="{{ asset('frontendAdmin/assets/css/bootstrap.min.css') }}"> -->
-   
+
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 
     <link rel="stylesheet" href="{{ asset('frontendAdmin/assets/css/bootstrap-datetimepicker.min.css') }}">
@@ -74,12 +74,12 @@
                         <a href="javascript:void(0);" class="responsive-search">
                             <i class="fa fa-search"></i>
                         </a>
-                        
+
                     </div>
                 </li>
 
 
-              
+
 
 
                 <li class="nav-item dropdown">
@@ -194,8 +194,11 @@
                                 <span class="user-img"><img src="{{ asset('frontendAdmin/assets/img/profiles/avator1.jpg') }}" alt="">
                                     <span class="status online"></span></span>
                                 <div class="profilesets">
-                                    <h6>John Doe</h6>
+                                    <h6>{{ auth()->user()->name }}</h6>
+
+                                    @if(auth()->user()->is_admin)
                                     <h5>Admin</h5>
+                                    @endif
                                 </div>
                             </div>
                             <hr class="m-0">
@@ -204,8 +207,16 @@
                             <a class="dropdown-item" href="generalsettings.html"><i class="me-2"
                                     data-feather="settings"></i>Settings</a>
                             <hr class="m-0">
-                            <a class="dropdown-item logout pb-0" href="signin.html"><img
-                                    src="{{ asset('frontendAdmin/assets/img/icons/log-out.svg') }}" class="me-2" alt="img">Logout</a>
+                            <a class="dropdown-item logout pb-0" href="{{ route('logout') }}"
+                            src="{{ asset('frontendAdmin/assets/img/icons/log-out.svg') }}" class="me-2" alt="img"
+
+                            onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                            {{ __('Log Out') }}
+                        </a>
+
+                        <form id="logout-form" method="POST" action="{{ route('logout') }}" style="display: none;">
+                            @csrf
+                        </form>
                         </div>
                     </div>
                 </li>
@@ -230,16 +241,18 @@
                 <div id="sidebar-menu" class="sidebar-menu">
                     <ul>
                         <li>
-                            <a href="index.html"><img src="{{ asset('frontendAdmin/assets/img/icons/dashboard.svg') }}" alt="img"><span>
+                            <a href="{{ route('dashboard') }}"><img src="{{ asset('frontendAdmin/assets/img/icons/dashboard.svg') }}" alt="img"><span>
                                     Dashboard</span> </a>
                         </li>
+
+                        @if(auth()->user()->is_admin)
 
                         <li class="submenu">
                             <a href=""><img src="{{ asset('frontendAdmin/assets/img/icons/time.svg') }}" alt="img"><span>
                                     Courses Category</span> <span class="menu-arrow"></span></a>
                             <ul>
                                 <li><a href="{{ route('course_category') }}">Cagtegory List</a></li>
-                               
+
                             </ul>
                         </li>
 
@@ -248,7 +261,7 @@
                                     Courses</span> <span class="menu-arrow"></span></a>
                             <ul>
                                 <li><a href="{{ route('courses-list') }}">Courses List</a></li>
-                               
+
                             </ul>
                         </li>
 
@@ -257,12 +270,21 @@
                                     Appointments</span> <span class="menu-arrow"></span></a>
                             <ul>
                                 <li><a href="https://doctorappointment.aveenirit.com/admin/appointment/page">Take Appointments</a></li>
-                               
+
                             </ul>
                         </li>
 
+                        @endif
 
-                        
+                        <li class="submenu">
+                            <a href=""><img src="{{ asset('frontendAdmin/assets/img/icons/time.svg') }}" alt="img"><span>
+                                    My courses</span> <span class="menu-arrow"></span></a>
+                            <ul>
+                                <li><a href="{{ route('course_category') }}">Courses List</a></li>
+
+                            </ul>
+                        </li>
+
                     </ul>
                 </div>
             </div>
@@ -286,7 +308,7 @@
 
     </div>
 
-    
+
     <script src="{{ asset('frontendAdmin/assets/js/jquery-3.6.0.min.js') }}"></script>
 
     <script src="{{ asset('frontendAdmin/assets/js/feather.min.js') }}"></script>
@@ -314,8 +336,8 @@
     <script src="https://cdn.ckeditor.com/ckeditor5/37.0.1/classic/ckeditor.js"></script>
 
     @yield('ck-editor')
-     
-    
+
+
 </body>
 
 </html>

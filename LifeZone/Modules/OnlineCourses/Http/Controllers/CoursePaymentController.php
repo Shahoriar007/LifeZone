@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 
 use Modules\OnlineCourses\Entities\Course;
+use Modules\OnlineCourses\Entities\CoursePayment;
 
 class CoursePaymentController extends Controller
 {
@@ -19,6 +20,21 @@ class CoursePaymentController extends Controller
         $courseData = Course::find($id);
 
         return view('onlinecourses::userSide-Courses.payment',compact('courseData'));
+    }
+
+    public function confirm_course_payment(Request $request , $id)
+    {
+
+          CoursePayment::create([
+            'tr_id' => $request->tr_id,
+            'user_id' => $request->user_id,
+            'course_id' => $request->course_id,
+            'course_price' => $request->course_price,
+
+        ]);
+
+        return back();
+        // return view('onlinecourses::userSide-Courses.payment',compact('courseData'));
     }
 
     /**

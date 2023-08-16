@@ -13,43 +13,66 @@ class CourseCategoryController extends Controller
     // Show List
     public function index()
     {
-        $courseCategorys = CourseCategory::all();
 
-        return view('onlinecourses::adminSide-Courses.courseCategoryList',compact('courseCategorys'));
+        if (auth()->user()->is_admin) {
+
+            $courseCategorys = CourseCategory::all();
+            return view('onlinecourses::adminSide-Courses.courseCategoryList', compact('courseCategorys'));
+
+        } else {
+            return redirect()->route('dashboard');
+        }
     }
 
-    
+
     public function createIndex()
     {
-        return view('onlinecourses::adminSide-Courses.addCourseCategory');
+        if (auth()->user()->is_admin) {
+
+            return view('onlinecourses::adminSide-Courses.addCourseCategory');
+        } else {
+            return redirect()->route('dashboard');
+        }
     }
 
 
     public function store(Request $request)
     {
-        $validatedData = $request->validate([
-            'category_name' => 'required|max:50'
-        ]);
+        if (auth()->user()->is_admin) {
+            $validatedData = $request->validate([
+                'category_name' => 'required|max:50'
+            ]);
 
-        $Category = CourseCategory::create([
-            'category_name' => $validatedData['category_name'],
-        ]);
+            $Category = CourseCategory::create([
+                'category_name' => $validatedData['category_name'],
+            ]);
 
-        return redirect()->route('course_category');
+            return redirect()->route('course_category');
+        } else {
+            return redirect()->route('dashboard');
+        }
 
     }
 
-    
+
     public function edit($id)
     {
-        return view('onlinecourses::edit');
+        if (auth()->user()->is_admin) {
+            return view('onlinecourses::edit');
+        } else {
+            return redirect()->route('dashboard');
+        }
     }
 
-    
+
     public function destroy($id)
     {
-        CourseCategory::findOrFail($id)->delete();
+        if (auth()->user()->is_admin) {
+            CourseCategory::findOrFail($id)->delete();
 
-        return redirect()->route('course_category');
+            return redirect()->route('course_category');
+        } else {
+            return redirect()->route('dashboard');
+        }
     }
 }

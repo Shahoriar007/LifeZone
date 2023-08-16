@@ -26,7 +26,7 @@
 
                         <form method="POST" action="{{ route('add_course_content') }}">
                             @csrf
-                            
+
                             <div class="form-group mb-0 row">
                                 <label class="col-form-label col-md-2">Input Content Information</label>
                                 <div class="col-md-10">
@@ -45,12 +45,12 @@
 
                                     </div>
 
-                                    <div class="input-group mb-3">
+                                    {{-- <div class="input-group mb-3">
 
                                         <input type="text" name="course_id" id="course_id" value="1" class="form-control" placeholder="course_id"
                                             aria-label="course_id" aria-describedby="basic-addon1" hidden>
 
-                                    </div>
+                                    </div> --}}
 
                                     <div class="input-group mb-3">
 
